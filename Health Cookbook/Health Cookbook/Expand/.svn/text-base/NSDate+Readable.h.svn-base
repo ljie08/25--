@@ -1,0 +1,34 @@
+//
+//  NSDate+Readable.h
+//  games
+//
+//  Created by xue sai on 10/14/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface NSDate (Readable)
+
+- (BOOL)dateIsToday;
+- (NSString*)readableDate;
+- (NSString*)shortDate;
+- (NSString *)shortStringFromDate;
+- (NSString*)slashDate;
+- (NSString*)readableTime;
+- (NSString*)readableDateAndTime;
+- (NSString*)readableTimeAndDate;
++ (NSDictionary*)dateDictByTimeInterval:(NSString *)timeInterval;
++ (NSString*)dateStringFromTimeInterval:(NSString*)timeInterval;
++ (NSString*)dateStringFromSecond:(unsigned int)seconds;
++ (NSString*)dateminStringFromSecond:(unsigned int)seconds;
++ (NSString*)dateminsecStringFromSecond:(unsigned int)seconds;
++ (NSString*)datehourminStringFromSecond:(unsigned int)seconds;
++ (NSString *)hmsStringFromSecond:(NSInteger)seconds;
+
+//2.8.0评论的时间显示规则
++ (NSString*)commentDateStringFromTimeInterval:(NSString*)timeInterval;
+
+- (NSString*)readableDateandWeekDay;
+- (NSString *)monthAndDay;
+@end

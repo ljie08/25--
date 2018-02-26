@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Health Cookbook
+
+  Created by 魔曦 on 2017/8/25.
+  Copyright © 2017年 魔曦. All rights reserved.
+*/
+
+"推荐" = "Referral";
+"分类" = "Classify";
+"收藏" = "Favorite";
+"收藏成功" = "Collection of success";
+"取消收藏" = "Cancel the collection";
+"" = "";

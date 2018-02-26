@@ -1,0 +1,19 @@
+platform :ios,'7.0'
+
+def myPods
+    pod 'AFNetworking', '~> 3.0.1'
+
+    pod 'Masonry', '~> 1.0.1'
+    pod 'FMDB', '~> 2.6.2'
+    pod 'MTA', '~> 1.5.8'
+    pod 'MJRefresh', '~> 3.1.12'
+    pod 'MBProgressHUD' , '~> 1.0.0'
+    pod 'SDWebImage', '~> 4.0'
+    pod 'MJExtension'  
+
+end
+
+target 'Health Cookbook' do
+    myPods
+end
+

@@ -1,0 +1,317 @@
+//
+//  NSDate+Readable.m
+//  games
+//
+//  Created by xue sai on 10/14/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import "NSDate+Readable.h"
+
+@implementation NSDate (Readable)
+
+- (BOOL)dateIsToday {
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyyMMdd"];
+    NSString *dateStr1 = [format stringFromDate:self];
+    NSString *dataStr2 = [format stringFromDate:[NSDate date]];
+    return [dateStr1 isEqualToString:dataStr2];
+}
+
+- (NSString*)readableDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy年MM月"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    return formattedDateString;
+}
+
+- (NSString *)monthAndDay
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    return formattedDateString;
+}
+
+- (NSString*)shortDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyyMMdd"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    return formattedDateString;
+}
+
+- (NSString *)shortStringFromDate{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //zzz表示时区，zzz可以删除，这样返回的日期字符将不包含时区信息 +0000。
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *destDateString = [dateFormatter stringFromDate:self];
+    return destDateString;
+    
+}
+
+-(NSString*)slashDate{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    return formattedDateString;
+    
+}
+
+- (NSString*)readableTime {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"H:mm开始"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    return formattedDateString;
+}
+
+- (NSString*)readableDateAndTime {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"M月d日 H:mm"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    return formattedDateString;
+}
+
+- (NSString*)readableTimeAndDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"H:mm YYYY年M月d日"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    return formattedDateString;
+}
+
++ (NSDictionary*)dateDictByTimeInterval:(NSString *)timeInterval {
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeInterval doubleValue]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-M-d"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:date];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:formattedDateString, @"date", nil];
+    return dict;
+}
+
+//2.8.0评论的时间显示规则
++ (NSString*)commentDateStringFromTimeInterval:(NSString*)timeInterval {
+    NSString *ret = @"1分钟前";
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeInterval doubleValue]];
+    NSDate *now = [NSDate date];
+    NSTimeInterval intervalTillNow = [now timeIntervalSinceDate:date];
+    
+    if (intervalTillNow < 60) {
+        ret = [NSString stringWithFormat:@"1分钟前"];
+    } else if (intervalTillNow < 3600) {
+        ret = [NSString stringWithFormat:@"%d分钟前", (int)intervalTillNow/60];
+    } else if (intervalTillNow < 3600*24) {
+        ret = [NSString stringWithFormat:@"%d小时前", (int)intervalTillNow/3600];
+    }else if (intervalTillNow < 3600*24*2) {
+        ret = @"昨天";
+    }else if (intervalTillNow < 3600*24*7) {
+        ret = [NSString stringWithFormat:@"%d天前",(int)intervalTillNow/(3600*24)];
+    }else{
+       
+        NSDate *dateLast=[now dateByAddingTimeInterval:-intervalTillNow];
+        NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"YYYY"];
+        NSString *addYear=[formatter stringFromDate:date];
+        NSString *nowYear=[formatter stringFromDate:now];
+        if ([addYear isEqualToString:nowYear]) {//今年
+            [formatter setDateFormat:@"MM-dd"];
+        }else{
+            [formatter setDateFormat:@"yyyy-MM-dd"];
+        }
+        ret = [formatter stringFromDate:dateLast];
+    }
+    return ret;
+}
+
+
++ (NSString*)dateStringFromTimeInterval:(NSString*)timeInterval {
+    NSString *ret = @"1分钟前";
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeInterval doubleValue]];
+    NSDate *now = [NSDate date];
+    NSTimeInterval intervalTillNow = [now timeIntervalSinceDate:date];
+    
+    if (intervalTillNow < 60) {
+        ret = [NSString stringWithFormat:@"1分钟前"];
+    } else if (intervalTillNow < 3600) {
+        ret = [NSString stringWithFormat:@"%d分钟前", (int)intervalTillNow/60];
+    } else if (intervalTillNow < 3600*24) {
+        ret = [NSString stringWithFormat:@"%d小时前", (int)intervalTillNow/3600];
+    } else {
+        
+        NSDate  *dateLast = [now dateByAddingTimeInterval:-intervalTillNow];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        ret = [formatter stringFromDate:dateLast];
+    }
+    return ret;
+}
+
++ (NSString *)hmsStringFromSecond:(NSInteger)seconds
+{
+    int hour = 0;
+    int min  = 0;
+    int sec  = 0;
+    
+    if(!(seconds<3600)){
+        hour = (int)seconds/3600;
+        min = ((int)seconds%3600)/60;
+        sec = (((int)seconds%3600)%60);
+    }else if((int)seconds<3600&&seconds>60){
+        
+        min = (int)seconds/60;
+        sec = (int)seconds%60;
+    }else if((int)seconds<60){
+        
+        sec = (int)seconds%60;
+    }
+    
+    return [NSString stringWithFormat:@"%02d小时%02d分%02d秒",hour,min,sec];
+}
+
++ (NSString*)dateStringFromSecond:(unsigned int)seconds{
+    
+    int hour = 0;
+    int min  = 0;
+    int sec  = 0;
+    
+    if(!(seconds<3600)){
+        hour = seconds/3600;
+        min = (seconds%3600)/60;
+        sec = ((seconds%3600)%60);
+    }else if(seconds<3600&&seconds>60){
+        
+        min = seconds/60;
+        sec = seconds%60;
+    }else if(seconds<60){
+        
+        sec = seconds%60;
+    }
+
+    return [NSString stringWithFormat:@"%02d:%02d:%02d",hour,min,sec];
+}
+
++ (NSString*)datehourminStringFromSecond:(unsigned int)seconds{
+    int hour = 0;
+    int min  = 0;
+    if(!(seconds<3600)){
+        hour = seconds/3600;
+        min = (seconds%3600)/60;
+    }else if(seconds<3600&&seconds>60){
+        min = seconds/60;
+    }
+    return [NSString stringWithFormat:@"%02dh%02dm",hour,min];
+}
+
++ (NSString*)dateminsecStringFromSecond:(unsigned int)seconds
+{
+    int min  = 0;
+    int sec  = 0;
+    
+    if (seconds <60) {
+        sec = seconds%60;
+    }else{
+        min = seconds/60;
+        sec = seconds%60;
+    }
+    
+    if (min<100) {
+        return [NSString stringWithFormat:@"%02d:%02d",min,sec];
+
+    }
+    return [NSString stringWithFormat:@"%03d:%02d",min,sec];
+}
+
++ (NSString*)dateminStringFromSecond:(unsigned int)seconds{
+    
+    int hour = 0;
+    int min  = 0;
+    int sec  = 0;
+    
+    if(!(seconds<3600)){
+        hour = seconds/3600;
+        min = (seconds%3600)/60;
+        sec = ((seconds%3600)%60);
+    }else if(seconds<3600&&seconds>60){
+        
+        min = seconds/60;
+        sec = seconds%60;
+    }else if(seconds<60){
+        
+        sec = seconds%60;
+    }
+    
+    float secfloat = (float)sec/60.0;
+    
+    NSString *timeStr = [NSString stringWithFormat:@"%0.1f",min+secfloat];
+    
+    return timeStr;
+}
+
+- (NSString*)readableDateandWeekDay {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"M月d日"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:self];
+    
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc] init];
+    [dateFormatter1 setDateFormat:@"yyyy-MM-dd"];
+    NSString *refDateString = [dateFormatter1 stringFromDate:self];
+    
+    
+    NSDate * today = [NSDate date];
+    NSDate * yesterday = [NSDate dateWithTimeIntervalSinceNow:-86400];
+    NSDate * tormorrow = [NSDate dateWithTimeIntervalSinceNow:86400];
+
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit) fromDate:self];
+    
+    NSString *weekday = nil;
+    
+    switch ([components weekday]) {
+        case 1:{
+            weekday = @"周日";
+            break;
+        }
+        case 2:{
+            weekday = @"周一";
+            break;
+        }
+        case 3:{
+            weekday = @"周二";
+            break;
+        }
+        case 4:{
+            weekday = @"周三";
+            break;
+        }
+        case 5:{
+            weekday = @"周四";
+            break;
+        }
+        case 6:{
+            weekday = @"周五";
+            break;
+        }
+        case 7:{
+            weekday = @"周六";
+            break;
+        }
+        default:
+            break;
+            
+    }
+    
+    NSString * todayString = [[today description] substringToIndex:10];
+    NSString * yesterdayString = [[yesterday description] substringToIndex:10];
+    NSString * tormorrowString = [[tormorrow description] substringToIndex:10];
+    if ([refDateString isEqualToString:todayString]){
+        weekday= @"今日";
+    } else if ([refDateString isEqualToString:yesterdayString]){
+        weekday = @"昨日";
+    }else if([refDateString isEqualToString:tormorrowString]){
+        
+    }
+    
+    NSString *dateAndWeek = [NSString stringWithFormat:@"%@ %@",formattedDateString,weekday];
+    
+    return dateAndWeek;
+}
+
+@end

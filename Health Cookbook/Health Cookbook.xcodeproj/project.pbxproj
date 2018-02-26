@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CA28F6E2FDE88222B5F40AD /* libPods-Health Cookbook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3BEADD96C9F0AECFFABBD0 /* libPods-Health Cookbook.a */; };
+		95D973C31F4C18B20084CAA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973C21F4C18B20084CAA0 /* main.m */; };
+		95D973C61F4C18B20084CAA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973C51F4C18B20084CAA0 /* AppDelegate.m */; };
+		95D973CE1F4C18B20084CAA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D973CD1F4C18B20084CAA0 /* Assets.xcassets */; };
+		95D973D11F4C18B20084CAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D973CF1F4C18B20084CAA0 /* LaunchScreen.storyboard */; };
+		95D973DA1F4C19ED0084CAA0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973D91F4C19ED0084CAA0 /* BaseViewController.m */; };
+		95D973F21F4D0FAB0084CAA0 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973E11F4D0FAB0084CAA0 /* NSString+MD5Addition.m */; };
+		95D973F31F4D0FAB0084CAA0 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973E31F4D0FAB0084CAA0 /* RIButtonItem.m */; };
+		95D973F41F4D0FAB0084CAA0 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973E51F4D0FAB0084CAA0 /* UIActionSheet+Blocks.m */; };
+		95D973F51F4D0FAB0084CAA0 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973E71F4D0FAB0084CAA0 /* UIAlertView+Blocks.m */; };
+		95D973F71F4D0FAB0084CAA0 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973EB1F4D0FAB0084CAA0 /* UIImage+ImageEffects.m */; };
+		95D973F81F4D0FAB0084CAA0 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973ED1F4D0FAB0084CAA0 /* UIImage+Resize.m */; };
+		95D973F91F4D0FAB0084CAA0 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D973EF1F4D0FAB0084CAA0 /* UIView+frame.m */; };
+		95D974111F4D58300084CAA0 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D974101F4D58300084CAA0 /* Tools.m */; };
+		95D974181F4D59890084CAA0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D974171F4D59890084CAA0 /* HomeViewController.m */; };
+		95D9741B1F4D70050084CAA0 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D9741A1F4D70050084CAA0 /* RecommendModel.m */; };
+		95D9741E1F4D71FB0084CAA0 /* RecommendLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D9741D1F4D71FB0084CAA0 /* RecommendLayout.m */; };
+		95D974211F4D81F80084CAA0 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D974201F4D81F80084CAA0 /* RecommendCell.m */; };
+		95D974271F4EA0730084CAA0 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D974261F4EA0730084CAA0 /* RecommendViewController.m */; };
+		95D9742A1F4EA07F0084CAA0 /* ClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D974291F4EA07F0084CAA0 /* ClassifyViewController.m */; };
+		95D9742D1F4EA0B50084CAA0 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D9742C1F4EA0B50084CAA0 /* FavoriteViewController.m */; };
+		95D974301F4EC3410084CAA0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D9742F1F4EC3410084CAA0 /* DetailViewController.m */; };
+		95D974611F4FB27A0084CAA0 /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D974601F4FB27A0084CAA0 /* favorite.png */; };
+		95D974631F4FB41A0084CAA0 /* ic_back_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D974621F4FB41A0084CAA0 /* ic_back_nor.png */; };
+		95D974651F4FB5050084CAA0 /* unfavorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D974641F4FB5050084CAA0 /* unfavorite.png */; };
+		95D974681F4FBBD60084CAA0 /* ClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D974671F4FBBD60084CAA0 /* ClassifyModel.m */; };
+		95D9746B1F4FBD920084CAA0 /* ClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D9746A1F4FBD920084CAA0 /* ClassifyCell.m */; };
+		95D9746E1F4FEEB20084CAA0 /* HCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D9746D1F4FEEB20084CAA0 /* HCDataManager.m */; };
+		95D974721F5005100084CAA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95D974741F5005100084CAA0 /* InfoPlist.strings */; };
+		95D974781F5005910084CAA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95D9747A1F5005910084CAA0 /* Localizable.strings */; };
+		95D9747E1F53AE290084CAA0 /* HUDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D9747D1F53AE290084CAA0 /* HUDUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7320ED2C9AA885FC9920C066 /* Pods-Health Cookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health Cookbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health Cookbook/Pods-Health Cookbook.debug.xcconfig"; sourceTree = "<group>"; };
+		8C3BEADD96C9F0AECFFABBD0 /* libPods-Health Cookbook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Health Cookbook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D973BE1F4C18B20084CAA0 /* Health Cookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Cookbook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D973C21F4C18B20084CAA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		95D973C41F4C18B20084CAA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		95D973C51F4C18B20084CAA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		95D973CD1F4C18B20084CAA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D973D01F4C18B20084CAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95D973D21F4C18B20084CAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D973D81F4C19ED0084CAA0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		95D973D91F4C19ED0084CAA0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		95D973E01F4D0FAB0084CAA0 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		95D973E11F4D0FAB0084CAA0 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		95D973E21F4D0FAB0084CAA0 /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
+		95D973E31F4D0FAB0084CAA0 /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
+		95D973E41F4D0FAB0084CAA0 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		95D973E51F4D0FAB0084CAA0 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		95D973E61F4D0FAB0084CAA0 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		95D973E71F4D0FAB0084CAA0 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		95D973EA1F4D0FAB0084CAA0 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		95D973EB1F4D0FAB0084CAA0 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		95D973EC1F4D0FAB0084CAA0 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		95D973ED1F4D0FAB0084CAA0 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		95D973EE1F4D0FAB0084CAA0 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		95D973EF1F4D0FAB0084CAA0 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		95D9740D1F4D523D0084CAA0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		95D9740E1F4D568D0084CAA0 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		95D9740F1F4D58300084CAA0 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		95D974101F4D58300084CAA0 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		95D974161F4D59890084CAA0 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		95D974171F4D59890084CAA0 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		95D974191F4D70050084CAA0 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
+		95D9741A1F4D70050084CAA0 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
+		95D9741C1F4D71FB0084CAA0 /* RecommendLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendLayout.h; sourceTree = "<group>"; };
+		95D9741D1F4D71FB0084CAA0 /* RecommendLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendLayout.m; sourceTree = "<group>"; };
+		95D9741F1F4D81F80084CAA0 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
+		95D974201F4D81F80084CAA0 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
+		95D974251F4EA0730084CAA0 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		95D974261F4EA0730084CAA0 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		95D974281F4EA07F0084CAA0 /* ClassifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyViewController.h; sourceTree = "<group>"; };
+		95D974291F4EA07F0084CAA0 /* ClassifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyViewController.m; sourceTree = "<group>"; };
+		95D9742B1F4EA0B50084CAA0 /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		95D9742C1F4EA0B50084CAA0 /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		95D9742E1F4EC3410084CAA0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		95D9742F1F4EC3410084CAA0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		95D974601F4FB27A0084CAA0 /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		95D974621F4FB41A0084CAA0 /* ic_back_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back_nor.png; sourceTree = "<group>"; };
+		95D974641F4FB5050084CAA0 /* unfavorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfavorite.png; sourceTree = "<group>"; };
+		95D974661F4FBBD60084CAA0 /* ClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyModel.h; sourceTree = "<group>"; };
+		95D974671F4FBBD60084CAA0 /* ClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyModel.m; sourceTree = "<group>"; };
+		95D974691F4FBD920084CAA0 /* ClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyCell.h; sourceTree = "<group>"; };
+		95D9746A1F4FBD920084CAA0 /* ClassifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyCell.m; sourceTree = "<group>"; };
+		95D9746C1F4FEEB20084CAA0 /* HCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDataManager.h; sourceTree = "<group>"; };
+		95D9746D1F4FEEB20084CAA0 /* HCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDataManager.m; sourceTree = "<group>"; };
+		95D974711F5005050084CAA0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		95D974731F5005100084CAA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		95D974751F5005120084CAA0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		95D974791F5005910084CAA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95D9747B1F5005920084CAA0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		95D9747C1F53AE290084CAA0 /* HUDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDUtils.h; sourceTree = "<group>"; };
+		95D9747D1F53AE290084CAA0 /* HUDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDUtils.m; sourceTree = "<group>"; };
+		A21FBC7614BB338B176CDC68 /* Pods-Health Cookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health Cookbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health Cookbook/Pods-Health Cookbook.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95D973BB1F4C18B20084CAA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CA28F6E2FDE88222B5F40AD /* libPods-Health Cookbook.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1927E7384F532D0CA0675939 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C3BEADD96C9F0AECFFABBD0 /* libPods-Health Cookbook.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95D973B51F4C18B20084CAA0 = {
+			isa = PBXGroup;
+			children = (
+				95D973C01F4C18B20084CAA0 /* Health Cookbook */,
+				95D973BF1F4C18B20084CAA0 /* Products */,
+				A5979AA15EB6508FE55516D4 /* Pods */,
+				1927E7384F532D0CA0675939 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		95D973BF1F4C18B20084CAA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95D973BE1F4C18B20084CAA0 /* Health Cookbook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95D973C01F4C18B20084CAA0 /* Health Cookbook */ = {
+			isa = PBXGroup;
+			children = (
+				95D974311F4ECA600084CAA0 /* resource */,
+				95D973C41F4C18B20084CAA0 /* AppDelegate.h */,
+				95D973C51F4C18B20084CAA0 /* AppDelegate.m */,
+				95D9746C1F4FEEB20084CAA0 /* HCDataManager.h */,
+				95D9746D1F4FEEB20084CAA0 /* HCDataManager.m */,
+				95D974151F4D59470084CAA0 /* Base */,
+				95D974121F4D593A0084CAA0 /* Controller */,
+				95D974131F4D593A0084CAA0 /* Model */,
+				95D974141F4D593A0084CAA0 /* View */,
+				95D973CD1F4C18B20084CAA0 /* Assets.xcassets */,
+				95D973CF1F4C18B20084CAA0 /* LaunchScreen.storyboard */,
+				95D973D21F4C18B20084CAA0 /* Info.plist */,
+				95D973DB1F4D0FAB0084CAA0 /* Expand */,
+				95D973C11F4C18B20084CAA0 /* Supporting Files */,
+				95D9740D1F4D523D0084CAA0 /* PrefixHeader.pch */,
+				95D9740E1F4D568D0084CAA0 /* Constant.h */,
+				95D974741F5005100084CAA0 /* InfoPlist.strings */,
+				95D9747A1F5005910084CAA0 /* Localizable.strings */,
+			);
+			path = "Health Cookbook";
+			sourceTree = "<group>";
+		};
+		95D973C11F4C18B20084CAA0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95D973C21F4C18B20084CAA0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95D973DB1F4D0FAB0084CAA0 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				95D9747C1F53AE290084CAA0 /* HUDUtils.h */,
+				95D9747D1F53AE290084CAA0 /* HUDUtils.m */,
+				95D9740F1F4D58300084CAA0 /* Tools.h */,
+				95D974101F4D58300084CAA0 /* Tools.m */,
+				95D973E01F4D0FAB0084CAA0 /* NSString+MD5Addition.h */,
+				95D973E11F4D0FAB0084CAA0 /* NSString+MD5Addition.m */,
+				95D973E21F4D0FAB0084CAA0 /* RIButtonItem.h */,
+				95D973E31F4D0FAB0084CAA0 /* RIButtonItem.m */,
+				95D973E41F4D0FAB0084CAA0 /* UIActionSheet+Blocks.h */,
+				95D973E51F4D0FAB0084CAA0 /* UIActionSheet+Blocks.m */,
+				95D973E61F4D0FAB0084CAA0 /* UIAlertView+Blocks.h */,
+				95D973E71F4D0FAB0084CAA0 /* UIAlertView+Blocks.m */,
+				95D973EA1F4D0FAB0084CAA0 /* UIImage+ImageEffects.h */,
+				95D973EB1F4D0FAB0084CAA0 /* UIImage+ImageEffects.m */,
+				95D973EC1F4D0FAB0084CAA0 /* UIImage+Resize.h */,
+				95D973ED1F4D0FAB0084CAA0 /* UIImage+Resize.m */,
+				95D973EE1F4D0FAB0084CAA0 /* UIView+frame.h */,
+				95D973EF1F4D0FAB0084CAA0 /* UIView+frame.m */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		95D974121F4D593A0084CAA0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95D974161F4D59890084CAA0 /* HomeViewController.h */,
+				95D974171F4D59890084CAA0 /* HomeViewController.m */,
+				95D974251F4EA0730084CAA0 /* RecommendViewController.h */,
+				95D974261F4EA0730084CAA0 /* RecommendViewController.m */,
+				95D974281F4EA07F0084CAA0 /* ClassifyViewController.h */,
+				95D974291F4EA07F0084CAA0 /* ClassifyViewController.m */,
+				95D9742B1F4EA0B50084CAA0 /* FavoriteViewController.h */,
+				95D9742C1F4EA0B50084CAA0 /* FavoriteViewController.m */,
+				95D9742E1F4EC3410084CAA0 /* DetailViewController.h */,
+				95D9742F1F4EC3410084CAA0 /* DetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95D974131F4D593A0084CAA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95D974191F4D70050084CAA0 /* RecommendModel.h */,
+				95D9741A1F4D70050084CAA0 /* RecommendModel.m */,
+				95D974661F4FBBD60084CAA0 /* ClassifyModel.h */,
+				95D974671F4FBBD60084CAA0 /* ClassifyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95D974141F4D593A0084CAA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95D9741C1F4D71FB0084CAA0 /* RecommendLayout.h */,
+				95D9741D1F4D71FB0084CAA0 /* RecommendLayout.m */,
+				95D9741F1F4D81F80084CAA0 /* RecommendCell.h */,
+				95D974201F4D81F80084CAA0 /* RecommendCell.m */,
+				95D974691F4FBD920084CAA0 /* ClassifyCell.h */,
+				95D9746A1F4FBD920084CAA0 /* ClassifyCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95D974151F4D59470084CAA0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				95D973D81F4C19ED0084CAA0 /* BaseViewController.h */,
+				95D973D91F4C19ED0084CAA0 /* BaseViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		95D974311F4ECA600084CAA0 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				95D974621F4FB41A0084CAA0 /* ic_back_nor.png */,
+				95D974601F4FB27A0084CAA0 /* favorite.png */,
+				95D974641F4FB5050084CAA0 /* unfavorite.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		A5979AA15EB6508FE55516D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7320ED2C9AA885FC9920C066 /* Pods-Health Cookbook.debug.xcconfig */,
+				A21FBC7614BB338B176CDC68 /* Pods-Health Cookbook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95D973BD1F4C18B20084CAA0 /* Health Cookbook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D973D51F4C18B20084CAA0 /* Build configuration list for PBXNativeTarget "Health Cookbook" */;
+			buildPhases = (
+				0931573B9A35A7430756C1B6 /* [CP] Check Pods Manifest.lock */,
+				95D973BA1F4C18B20084CAA0 /* Sources */,
+				95D973BB1F4C18B20084CAA0 /* Frameworks */,
+				95D973BC1F4C18B20084CAA0 /* Resources */,
+				314359A69ABB0AF0A4C9CD98 /* [CP] Embed Pods Frameworks */,
+				7C2162BCB3952BB1AE15CD2A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Health Cookbook";
+			productName = "Health Cookbook";
+			productReference = 95D973BE1F4C18B20084CAA0 /* Health Cookbook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95D973B61F4C18B20084CAA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "魔曦";
+				TargetAttributes = {
+					95D973BD1F4C18B20084CAA0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = SE8CSBM56B;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 95D973B91F4C18B20084CAA0 /* Build configuration list for PBXProject "Health Cookbook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 95D973B51F4C18B20084CAA0;
+			productRefGroup = 95D973BF1F4C18B20084CAA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95D973BD1F4C18B20084CAA0 /* Health Cookbook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95D973BC1F4C18B20084CAA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D974631F4FB41A0084CAA0 /* ic_back_nor.png in Resources */,
+				95D974721F5005100084CAA0 /* InfoPlist.strings in Resources */,
+				95D973D11F4C18B20084CAA0 /* LaunchScreen.storyboard in Resources */,
+				95D974781F5005910084CAA0 /* Localizable.strings in Resources */,
+				95D974651F4FB5050084CAA0 /* unfavorite.png in Resources */,
+				95D973CE1F4C18B20084CAA0 /* Assets.xcassets in Resources */,
+				95D974611F4FB27A0084CAA0 /* favorite.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0931573B9A35A7430756C1B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Health Cookbook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		314359A69ABB0AF0A4C9CD98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health Cookbook/Pods-Health Cookbook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C2162BCB3952BB1AE15CD2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Health Cookbook/Pods-Health Cookbook-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health Cookbook/Pods-Health Cookbook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95D973BA1F4C18B20084CAA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9742D1F4EA0B50084CAA0 /* FavoriteViewController.m in Sources */,
+				95D973C61F4C18B20084CAA0 /* AppDelegate.m in Sources */,
+				95D973DA1F4C19ED0084CAA0 /* BaseViewController.m in Sources */,
+				95D974211F4D81F80084CAA0 /* RecommendCell.m in Sources */,
+				95D973F51F4D0FAB0084CAA0 /* UIAlertView+Blocks.m in Sources */,
+				95D9747E1F53AE290084CAA0 /* HUDUtils.m in Sources */,
+				95D973F71F4D0FAB0084CAA0 /* UIImage+ImageEffects.m in Sources */,
+				95D973F81F4D0FAB0084CAA0 /* UIImage+Resize.m in Sources */,
+				95D973F31F4D0FAB0084CAA0 /* RIButtonItem.m in Sources */,
+				95D973F21F4D0FAB0084CAA0 /* NSString+MD5Addition.m in Sources */,
+				95D974301F4EC3410084CAA0 /* DetailViewController.m in Sources */,
+				95D9746E1F4FEEB20084CAA0 /* HCDataManager.m in Sources */,
+				95D974111F4D58300084CAA0 /* Tools.m in Sources */,
+				95D9741B1F4D70050084CAA0 /* RecommendModel.m in Sources */,
+				95D9746B1F4FBD920084CAA0 /* ClassifyCell.m in Sources */,
+				95D973F91F4D0FAB0084CAA0 /* UIView+frame.m in Sources */,
+				95D974681F4FBBD60084CAA0 /* ClassifyModel.m in Sources */,
+				95D9742A1F4EA07F0084CAA0 /* ClassifyViewController.m in Sources */,
+				95D973C31F4C18B20084CAA0 /* main.m in Sources */,
+				95D973F41F4D0FAB0084CAA0 /* UIActionSheet+Blocks.m in Sources */,
+				95D974271F4EA0730084CAA0 /* RecommendViewController.m in Sources */,
+				95D9741E1F4D71FB0084CAA0 /* RecommendLayout.m in Sources */,
+				95D974181F4D59890084CAA0 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		95D973CF1F4C18B20084CAA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D973D01F4C18B20084CAA0 /* Base */,
+				95D974711F5005050084CAA0 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		95D974741F5005100084CAA0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D974731F5005100084CAA0 /* en */,
+				95D974751F5005120084CAA0 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		95D9747A1F5005910084CAA0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D974791F5005910084CAA0 /* en */,
+				95D9747B1F5005920084CAA0 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95D973D31F4C18B20084CAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		95D973D41F4C18B20084CAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D973D61F4C18B20084CAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7320ED2C9AA885FC9920C066 /* Pods-Health Cookbook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = SE8CSBM56B;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Health Cookbook/PrefixHeader.pch";
+				INFOPLIST_FILE = "Health Cookbook/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"mtasdk\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljie.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "677a8bf0-4df9-45c0-8a56-be9985862ac0";
+				PROVISIONING_PROFILE_SPECIFIER = LiJie;
+			};
+			name = Debug;
+		};
+		95D973D71F4C18B20084CAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A21FBC7614BB338B176CDC68 /* Pods-Health Cookbook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = SE8CSBM56B;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Health Cookbook/PrefixHeader.pch";
+				INFOPLIST_FILE = "Health Cookbook/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"mtasdk\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljie.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "677a8bf0-4df9-45c0-8a56-be9985862ac0";
+				PROVISIONING_PROFILE_SPECIFIER = LiJie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95D973B91F4C18B20084CAA0 /* Build configuration list for PBXProject "Health Cookbook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D973D31F4C18B20084CAA0 /* Debug */,
+				95D973D41F4C18B20084CAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D973D51F4C18B20084CAA0 /* Build configuration list for PBXNativeTarget "Health Cookbook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D973D61F4C18B20084CAA0 /* Debug */,
+				95D973D71F4C18B20084CAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95D973B61F4C18B20084CAA0 /* Project object */;
+}
